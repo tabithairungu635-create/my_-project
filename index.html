@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CrystalWash Laundry</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Bubbles behind everything -->
+  <div id="bubbles" aria-hidden="true"></div>
+
+  <!-- Sidebar / quick actions -->
+  <nav class="sidebar" aria-label="Quick links">
+    <a class="sidebar-btn" href="#home" title="Home"><i class="fa fa-home"></i></a>
+    <a class="sidebar-btn" href="#services" title="Services"><i class="fa fa-concierge-bell"></i></a>
+    <a class="sidebar-btn" href="#status" title="Track Order"><i class="fa fa-search"></i></a>
+    <a class="sidebar-btn" href="#contact" title="Contact"><i class="fa fa-envelope"></i></a>
+    <a class="sidebar-btn" id="emailBtn" href="mailto:tabithairungu635@gmail.com" title="Email"><i class="fa fa-paper-plane"></i></a>
+    <a class="sidebar-btn" id="waBtn" href="https://wa.me/254791955920" target="_blank" rel="noopener" title="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header id="home" class="hero" role="banner" aria-label="CrystalWash hero">
+    <div class="hero-overlay">
+      <h1 class="brand-title" aria-live="polite">CrystalWash Laundry</h1>
+      <p class="tagline">Fresh. Fast. Flawless laundry & specialty cleaning</p>
+      <div class="hero-actions">
+        <a id="heroBook" class="btn primary" href="#">Book Now</a>
+        <a class="btn outline" href="#services">See Services</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <p class="lead">We clean garments, shoes, carpets and bedding with expert care.</p>
+        <div class="grid services-grid">
+          <div class="card service-card">
+            <i class="fa fa-tshirt icon" aria-hidden="true"></i>
+            <h3>Clothes Laundry</h3>
+            <p>Wash, gentle dry & fold — everyday garments and uniforms.</p>
+          </div>
+
+          <div class="card service-card">
+            <i class="fa fa-shoe-prints icon" aria-hidden="true"></i>
+            <h3>Shoes Cleaning</h3>
+            <p>Deep cleaning, stain removal and protection for all shoe types.</p>
+          </div>
+
+          <div class="card service-card">
+            <i class="fa fa-carpet icon" aria-hidden="true"></i>
+            <h3>Carpet Cleaning</h3>
+            <p>Steam & shampoo cleaning for rugs and carpets.</p>
+          </div>
+
+          <div class="card service-card">
+            <i class="fa fa-bed icon" aria-hidden="true"></i>
+            <h3>Duvet & Blanket</h3>
+            <p>Large-item cleaning for duvets, comforters and heavy bedding.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Status / Tracking -->
+    <section id="status" class="section alt">
+      <div class="container center">
+        <h2>Track Your Order</h2>
+        <p class="lead">Enter the phone number you used when booking to see the current status (demo).</p>
+
+        <div class="status-card">
+          <label for="phoneTrack">Phone number</label>
+          <input id="phoneTrack" type="tel" placeholder="+254 7XXXXXXXX" />
+          <div class="status-actions">
+            <button id="checkStatus" class="btn primary">Check Status</button>
+            <button id="demoStatus" class="btn outline">Demo Cycle</button>
+          </div>
+
+          <div id="progress" class="progress-steps" aria-live="polite">
+            <div class="step" data-step="1">Washing</div>
+            <div class="step" data-step="2">Drying</div>
+            <div class="step" data-step="3">Folding</div>
+            <div class="step" data-step="4">Ready for Pickup</div>
+            <div class="step" data-step="5">Out for Delivery</div>
+            <div class="step" data-step="6">Delivered</div>
+          </div>
+
+          <p id="statusMessage" class="status-message">No status checked yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-list">
+          <div class="faq">
+            <button class="faq-q">How long does a normal order take?</button>
+            <div class="faq-a">Standard orders are typically ready within 24–48 hours. Duvets and carpets may take longer.</div>
+          </div>
+
+          <div class="faq">
+            <button class="faq-q">Do you collect and deliver?</button>
+            <div class="faq-a">Yes. We offer pickup and delivery within our service area.</div>
+          </div>
+
+          <div class="faq">
+            <button class="faq-q">Which payment methods do you take?</button>
+            <div class="faq-a">Cash on delivery, M-Pesa and bank transfer for regular clients.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container center">
+        <h2>Contact & Book</h2>
+        <p class="lead">Send a message directly to our WhatsApp or open your SMS app — we'll respond as soon as possible.</p>
+
+        <div class="contact-card">
+          <input id="contactName" type="text" placeholder="Your name" />
+          <input id="contactPhone" type="tel" placeholder="+254 7XXXXXXXX" />
+          <textarea id="contactNote" rows="4" placeholder="Your message or booking details"></textarea>
+
+          <div class="contact-actions">
+            <button id="sendWa" class="btn primary wa">Send via WhatsApp</button>
+            <button id="sendSms" class="btn outline sms">Send via SMS</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© <span id="year"></span> CrystalWash Laundry — All rights reserved</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
